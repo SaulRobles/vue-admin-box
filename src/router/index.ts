@@ -7,9 +7,9 @@
  * @Description: 
  */
 /**
- * @description 所有人可使用的参数配置列表
- * @params hideMenu: 是否隐藏当前路由结点不在导航中展示
- * @params alwayShow: 只有一个子路由时是否总是展示菜单，默认false
+ * @description Una lista de configuraciones de parámetros disponibles para todos
+ * @params hideMenu: Si ocultar el nodo de enrutamiento actual y no mostrarlo en la navegación
+ * @params alwayShow: Ya sea para mostrar siempre el menú cuando solo hay una ruta secundaria，defecto: false
  */
 import { reactive } from 'vue'
 import { createRouter, createWebHashHistory } from 'vue-router'
@@ -20,13 +20,13 @@ import { changeTitle } from '@/utils/system/title'
 
 NProgress.configure({ showSpinner: false })
 
-// 引入不需要权限的modules
+// importar sin permiso modules
 import System from './modules/system'
 
 /** 
- * @name 初始化必须要的路由
- * @description 使用reactive属性使得modules可以在路由菜单里面实时响应，搞定菜单回显的问题
- * @detail 针对modules的任何修改，均会同步至菜单级别，记住，是针对变量名为：moduels的修改
+ * @name Inicializar las rutas necesarias
+ * @description usar reactive hace atributos modules Puede responder en tiempo real en el menú de enrutamiento，Solucionar el problema del eco del menú.
+ * @detail para modules cualquier modificación de，están sincronizados con el nivel de menú，recuerda，es para una variable llamada：moduels Modificaciones
  **/
 let modules = reactive([
   ...System
@@ -39,29 +39,29 @@ const router = createRouter({
   routes: modules
 })
 
-// 未授权时可访问的白名单
+// Lista blanca para acceso no autorizado
 const whiteList = ['/login']
 
-// 路由跳转前的监听操作
+// Operación de escucha antes del salto de enrutamiento
 router.beforeEach((to, _from, next) => {
   NProgress.start();
   if (store.state.user.token) {
-    to.meta.title ? (changeTitle(to.meta.title)) : "" // 动态title
+    to.meta.title ? (changeTitle(to.meta.title)) : "" // dinámico title
     if (to.path === '/login') {
       next('/')
       return
     }
     next()
   } else if (whiteList.includes(to.path)) {
-    to.meta.title ? (changeTitle(to.meta.title)) : "" // 动态title
+    to.meta.title ? (changeTitle(to.meta.title)) : "" // dinámico title
     next()
   } else {
     next("/login"); // 全部重定向到登录页
-    to.meta.title ? (changeTitle(to.meta.title)) : "" // 动态title
+    to.meta.title ? (changeTitle(to.meta.title)) : "" // dinámico title
   }
 });
 
-// 路由跳转后的监听操作
+// Operación de escucha después del salto de enrutamiento
 router.afterEach((to, _from) => {
   const keepAliveComponentsName = store.getters['keepAlive/keepAliveComponentsName'] || []
   const name = to.matched[to.matched.length - 1].components.default.name

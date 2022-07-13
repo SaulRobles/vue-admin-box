@@ -21,7 +21,7 @@ const alias: Record<string, string> = {
 
 /** 
  * @description-en vite document address
- * @description-cn vite官网
+ * @description-cn vite Sitio Web Oficial
  * https://vitejs.cn/config/ */
 export default ({ command }: ConfigEnv): UserConfigExport => {
   const prodMock = true;
@@ -34,7 +34,7 @@ export default ({ command }: ConfigEnv): UserConfigExport => {
       port: 3001,
       host: '0.0.0.0',
       open: true,
-      proxy: { // 代理配置
+      proxy: { // Configuracion del proxy
         '/dev': 'https://www.fastmock.site/mock/48cab8545e64d93ff9ba66a87ad04f6b/'
       },
     },

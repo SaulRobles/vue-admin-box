@@ -1,3 +1,6 @@
+<!--http://localhost:4173/#/dashboard-->
+<!--Template de las tarjetas que estan antes de las graficas-->
+
 <template>
   <div class="card" :style="{ 'borderColor': row.color }">
     <div class="card-left">

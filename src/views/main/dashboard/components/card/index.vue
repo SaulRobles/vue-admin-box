@@ -1,6 +1,9 @@
+<!--http://localhost:3001/#/dashboard-->
+<!--Creacion e Injeccion de tarjetas que estan antes de las graficas-->
+
 <template>
   <div class="card-list">
-    <Row v-for="row in list" :key="row.id" :row="row" />
+    <Row v-for="row in list" :key="row.id" :row="row" /> <!--import Row from './row.vue'-->
   </div>
 </template>
 
@@ -13,10 +16,10 @@ export default defineComponent({
   },
   setup() {
     const list = [
-      { id: 1, name: '访问人数', data: '200', color: '#4e73df', icon: 'sfont system-yonghu' },
-      { id: 2, name: '最新信息', data: '20', color: '#1cc88a', icon: 'sfont system-xiaoxi' },
-      { id: 3, name: '库存数量', data: '20000', color: '#36b9cc', icon: 'sfont system-shuliang_mianxing' },
-      { id: 4, name: '当月营收', data: '20,000', color: '#f6c23e', icon: 'sfont system-jindutiaoshouyidaozhang' }
+      { id: 1, name: 'Número de visitantes', data: '20055', color: '#4e73df', icon: 'sfont system-yonghu' },
+      { id: 2, name: 'Información actualizada', data: '20', color: '#1cc88a', icon: 'sfont system-xiaoxi' },
+      { id: 3, name: 'Cantidad de inventario', data: '20000', color: '#36b9cc', icon: 'sfont system-shuliang_mianxing' },
+      { id: 4, name: 'Ingresos del mes', data: '20,000', color: '#f6c23e', icon: 'sfont system-jindutiaoshouyidaozhang' }
     ]
     return {
       list

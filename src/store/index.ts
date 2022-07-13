@@ -19,11 +19,11 @@ Object.keys(files).forEach((c: string) => {
   modules[moduleName] = module
 })
 
-// 这是一个vuex本地存储插件，默认把vuex所有数据都做存储了
-// local代表存储在localStorage里面，进行永久存储
-// session代表存储在sessionStorage里面，进行临时存储
-// 都接收Modules的文件名数组，如：['app', 'keepAlive', 'user']
-// 用户相关的数据建议直接存储在local里面，session里面会导致打开新窗口时获取不到token值，因为session只针对当前会话
+// Este es un complemento de almacenamiento local vuex，Todos los datos de vuex se almacenan de forma predeterminada
+// La representación local se almacena en localStorage para almacenamiento permanente
+// El representante de sesión se almacena en sessionStorage para almacenamiento temporal
+// Ambos reciben una matriz de nombres de archivo para módulos, como：['app', 'keepAlive', 'user']
+// Las recomendaciones de datos relacionados con el usuario se almacenan directamente en local，sessionHará que no lo obtenga cuando abra una nueva ventana token，porque session solo para la sesión actual
 const persistent = Persistent({ key: 'vuex', modules, modulesKeys: {
   local: Object.keys(modules),
   session: []

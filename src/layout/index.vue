@@ -62,7 +62,7 @@ export default defineComponent({
     const showLogo = computed(() => store.state.app.showLogo);
     const showTabs = computed(() => store.state.app.showTabs);
     const keepAliveComponentsName = computed(() => store.getters['keepAlive/keepAliveComponentsName']);
-    // 页面宽度变化监听后执行的方法
+    // El método ejecutado después del cambio de ancho de página es monitoreado
     const resizeHandler = () => {
       if (document.body.clientWidth <= 1000 && !isCollapse.value) {
         store.commit("app/isCollapseChange", true);
@@ -70,15 +70,15 @@ export default defineComponent({
         store.commit("app/isCollapseChange", false);
       }
     };
-    // 初始化调用
+    // llamada inicial
     resizeHandler();
     // beforeMount
     onBeforeMount(() => {
-      // 监听页面变化
+      // Supervisar los cambios de página
       useEventListener("resize", resizeHandler);
     });
     // methods
-    // 隐藏菜单
+    // Ocultar el menú
     const hideMenu = () => {
       store.commit("app/isCollapseChange", true);
     };

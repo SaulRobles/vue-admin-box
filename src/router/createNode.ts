@@ -1,5 +1,5 @@
-// 1. 用于解决keep-alive需要name的问题，动态生成随机name供keep-alive使用
-// 2. 用于解决transition动画内部结点只能为根元素的问题，单文件可写多结点
+// 1. para resolver keep-alive necesitar name El problema，Generar aleatoriamente dinámicamente name por keep-alive usar
+// 2. para resolver transition El problema de que el nodo interno de la animación solo puede ser el elemento raíz.，Un solo archivo puede escribir varios nodos
 import type { DefineComponent, Component } from 'vue'
 import { defineComponent, h, createVNode, ref, nextTick } from 'vue'
 import reload from './reload.vue'

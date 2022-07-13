@@ -10,7 +10,7 @@
 import { defineComponent } from 'vue'
 import basicTemplate from './components/basic-template.vue'
 import Card from './components/card/index.vue'
-import Charts from './components/charts/index.vue'
+import Charts from './components/charts/index.vue' //Graficos
 export default defineComponent({
   components: {
     Card,
