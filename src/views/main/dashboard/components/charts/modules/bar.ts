@@ -1,8 +1,8 @@
-var xAxis_data = ["01月", "02月", "03月", "04月", "05月", "06月", "07月", "08月", "09月", "10月", "11月", "12月"]
+var xAxis_data = ["Mes 01", "Mes 02", "Mes 03", "Mes 04", "Mes 05", "Mes 06", "Mes 07", "Mes 08", "Mes 09", "Mes 10", "Mes 11", "Mes 12"]
 var data_A = [820, 932, 901, 934, 1290, 1330, 1320, 720, 832, 501, 334, 990]
 var data_B = [720, 832, 501, 334, 990, 830, 720, 620, 732, 801, 1134, 908]
 var data_C = [620, 732, 801, 1134, 908, 930, 920, 820, 932, 901, 934, 1290]
-var names = ['2018年实际管理费用', '2019年预算费用', '2020年实际使用预算']
+var names = ['2018 Gastos administrativos reales anuales', '2019 Costos presupuestarios anuales', '2020 El presupuesto anual de uso real']
 var color = ['#4D8EFF', '#84BFFF', '#FE9D9A']
 
 const option = {
@@ -13,29 +13,29 @@ const option = {
       var htmlStr = '';
       for (var i = 0; i < params.length; i++) {
         var param = params[i];
-        var xName = param.name;//x轴的名称
-        var seriesName = param.seriesName;//图例名称
-        var value = param.value;//y轴值
-        var color = param.color;//图例颜色
+        var xName = param.name;//El nombre del eje x
+        var seriesName = param.seriesName;//Nombre de la leyenda
+        var value = param.value;//Valor del eje y
+        var color = param.color;//Color de leyenda
         if (i === 0) {
-          htmlStr += xName + '<br/>';//x轴的名称
+          htmlStr += xName + '<br/>';//El nombre del eje x
         }
         htmlStr += '<div>';
-        htmlStr += '<span style="margin-right:5px;display:inline-block;width:10px;height:10px;border-radius:5px;background-color:' + color + ';"></span>';//一个点
-        htmlStr += seriesName + '：' + value + '万元';//圆点后面显示的文本
+        htmlStr += '<span style="margin-right:5px;display:inline-block;width:10px;height:10px;border-radius:5px;background-color:' + color + ';"></span>';//Un punto
+        htmlStr += seriesName + ': ' + value + '万元';//El texto que aparece después del punto
         htmlStr += '</div>';
       }
       return htmlStr;
     }
   },
-  grid: {       //页边距
+  grid: {       //Márgenes
     top: '20%',
     left: '1%',
     right: '1%',
     bottom: '1%',
     containLabel: true
   },
-  legend: {      // 图例
+  legend: {      // Leyenda
     top: '5%',
     // right:'20%',
     data: names
@@ -44,11 +44,11 @@ const option = {
   xAxis: {
     type: 'category',
     data: xAxis_data,
-    axisLine: {//坐标线
+    axisLine: {//Líneas de coordenadas
       lineStyle: {
         type: 'solid',
-        color: '#E3E3E3', //轴线的颜色
-        width: '2' //坐标线的宽度
+        color: '#E3E3E3', //El color de la línea de cuadrícula
+        width: '2' //El ancho de la línea de coordenadas
       }
     },
     axisLabel: {
@@ -59,7 +59,7 @@ const option = {
       fontFamily: 'PingFang SC',
       fontWeight: 400,
       lineHeight: 17,
-      color: '#646464', //坐标值的具体的颜色
+      color: '#646464', //Valores de coordenadas para el color específico
       opacity: 1,
     },
     axisTick: {
@@ -68,10 +68,10 @@ const option = {
   },
   yAxis: {
     type: 'value',
-    axisLine: {//线
+    axisLine: {//línea
       show: false
     },
-    axisTick: {//刻度
+    axisTick: {//Escama
       show: false
     },
     axisLabel: {
@@ -82,15 +82,15 @@ const option = {
       fontFamily: 'PingFang SC',
       fontWeight: 400,
       lineHeight: 17,
-      color: '#979A9F', //坐标值的具体的颜色
+      color: '#979A9F', //Valores de coordenadas para el color específico
       opacity: 1,
     },
     splitLine: {
       lineStyle: {
         type: 'dashed',
         width: 2,
-        color: ['#E3E3E3'] //分割线的颜色
-        // color: ['#5d5d5d'] //分割线的颜色
+        color: ['#E3E3E3'] //El color de la línea divisoria
+        // color: ['#5d5d5d'] //El color de la línea divisoria
       }
     }
   },
@@ -99,31 +99,31 @@ const option = {
       type: 'bar',
       name: names[1],
       data: data_A,
-      symbolSize: 9, //设置拐点大小
+      symbolSize: 9, //Establece el tamaño del punto de inflexión
       itemStyle: {
         color: color[0]
       },
       lineStyle: {
         width: 2,
-        type: 'solid'  //'dotted'虚线 'solid'实线
+        type: 'solid'  //'dotted'Discontinua 'solid' Líneas sólidas
       }
     }, {
       type: 'bar',
       name: names[2],
       data: data_B,
-      symbolSize: 9, //设置拐点大小
+      symbolSize: 9, //Establece el tamaño del punto de inflexión
       itemStyle: {
         color: color[1]
       },
       lineStyle: {
         width: 2,
-        type: 'solid'  //'dotted'虚线 'solid'实线
+        type: 'solid'  //'dotted'Discontinua 'solid'Líneas sólidas
       }
     }, {
       type: 'line',
       name: names[0],
       data: data_C,
-      symbolSize: 9, //设置拐点大小
+      symbolSize: 9, //Establece el tamaño del punto de inflexión
       areaStyle: {
         color: {
           type: 'linear',
@@ -132,17 +132,17 @@ const option = {
           x2: 0,
           y2: 1,
           colorStops: [{
-            offset: 0, color: '#fe9d9a66' // 0% 处的颜色
+            offset: 0, color: '#fe9d9a66' // 0% El color del lugar
           }, {
-            offset: 1, color: '#fe9d9a00' // 100% 处的颜色
+            offset: 1, color: '#fe9d9a00' // 100% El color del lugar
           }],
-          global: false // 缺省为 false
+          global: false // El valor predeterminado es false
         }
       },
-      color: color[2], //设置颜色
+      color: color[2], //Establecer el color
       lineStyle: {
         width: 2,
-        type: 'solid'  //'dotted'虚线 'solid'实线
+        type: 'solid'  //'dotted'Discontinua 'solid'Líneas sólidas
       }
     },
   ]

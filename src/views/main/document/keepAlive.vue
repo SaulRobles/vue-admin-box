@@ -3,9 +3,9 @@
     <h1>keep-alive功能的使用</h1>
     <article>
       <section>
-        <p>当前项目已实现keep-alive缓存的页面有，<b>分类联动表格</b>、<b>树联动表格</b>、<b>卡片列表</b>。</p>
-        <p>重点：开发者不需要配各种name，只需要在路由管理文件中配置<b>cache：true</b>即可，这是实现keep-alive唯一需要关注的项。</p>
-        <p>由系统自动管理keep-alive需要的组件。</p>
+        <p>El proyecto actual ha implementado páginas en caché keep-alive son,<b>Tabla de vinculación de clasificación</b>、<b>Tabla de vinculación de árbol</b>、<b>Una lista de tarjetas</b>. </p>
+        <p>Importante: Los desarrolladores no necesitan configurar varios nombres, solo configuraciones en el archivo de administración de rutas<b> cache：true</b> Eso es todo, eso es lo único en lo que hay que centrarse para implementar keep-alive.</p>
+        <p>El sistema gestiona automáticamente los componentes necesarios para mantener vivo.</p>
       </section>
     </article>
   </div>

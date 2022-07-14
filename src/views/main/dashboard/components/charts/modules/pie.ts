@@ -1,7 +1,7 @@
 const option = {
   title: {
-      text: '浏览器占比变化',
-      subtext: '纯属虚构',
+      text: 'Cambios porcentuales en el navegador',
+      subtext: 'Pura ficción',
       top: 10,
       left: 10
   },
@@ -38,7 +38,7 @@ const option = {
       var series = [];
       for (var i = 1; i <= 28; i++) {
           series.push({
-              name: '浏览器（数据纯属虚构）',
+              name: 'Navegador (los datos son puramente ficticios)',
               type: 'radar',
               symbol: 'none',
               lineStyle: {

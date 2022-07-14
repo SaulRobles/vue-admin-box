@@ -1,32 +1,32 @@
 <template>
   <div class="layout-container">
-    <h1>使用说明</h1>
-    <p>为什么文档是写在系统内，一方面是因为偷懒，另一方面是因为我坚信，如果我用着不爽，那么大家用着也不会爽，所以文档部分就暂时放置于此了</p>
+    <h1>Instrucciones de uso</h1>
+    <p>Por qué los documentos se escriben dentro del sistema, Por un lado, es por pereza, Por otro lado, porque creo firmemente que si no me gusta, entonces todos no estarán contentos con él, por lo que la parte de documentación se coloca temporalmente aquí.</p>
     <div style="padding: 0 10px;"><basic-template /></div>
     <article>
-      <h2>简介</h2>
-      <p>vue-admin-box是一个开源的中后台管理项目，主要技术栈为vue3全家桶，包括了：vue3(vue-next)、vite、element-plus、vue-router、vuex、axios、vite-plugin-mock等众多中后台项目常用技术。</p>
+      <h2>Breve introducción</h2>
+      <p>vue-admin-box es un proyecto de gestión de segundo plano y medio de código abierto. La pila de tecnología principal es el depósito de la familia vue3, que incluye: vue3 (vue-next), vite, element-plus, vue-router, vuex, axios, vite- complemento: Mock y muchas otras tecnologías comunes en proyectos intermedios y de back-end.</p>
       <ol>
-        <li>vue3(vue-next)：本项目的核心技术栈，用于响应式模块的控制</li>
-        <li>vite：本地服务运行、打包编译工具，特点：轻量、快速</li>
-        <li>element-plus：vue3的组件库</li>
-        <li>vue-router：路由控制插件，本项目专门针对实际业务作了大量适配</li>
-        <li>vuex：状态管理器，并写了一个本地缓存插件供使用</li>
-        <li>axios：数据请求库，基于此做了更进一步的封装</li>
-        <li>vite-plugin-mock：本地和线上mock数据专用库，本地可查看到真实http请求，线上使用js版本来做替换</li>
+        <li>vue3(vue-next): La pila de tecnología central de este proyecto se utiliza para el control de módulos receptivos.</li>
+        <li>vite: Ejecución de servicios locales, herramientas de empaquetado y compilación, características: ligeras y rápidas</li>
+        <li>element-plus: biblioteca de componentes vue3</li>
+        <li>vue-router: Complemento de control de enrutamiento, este proyecto ha realizado muchas adaptaciones para negocios reales</li>
+        <li>vuex: Administrador de estado y escribió un complemento de caché local para su uso</li>
+        <li>axios: Biblioteca de solicitud de datos, basada en esta encapsulación adicional</li>
+        <li>vite-plugin-mock: Una biblioteca dedicada para datos simulados locales y en línea, la solicitud http real se puede ver localmente y la versión js se puede usar en línea para reemplazar</li>
       </ol>
-      <h2>关于crud的优化</h2>
-      <p>简单来说，你直接复制业务表格的文件夹，改个名，换个接口，调一下里面的细节，就可以直接使用了</p>
-      <p>业务表格，这是本开源项目最核心的理念，我基于日常开发过程中的情景，封装了一个核心的<b>弹窗组件</b>及一个<b>table组件</b>。</p>
-      <p>在日常开发中，增删查改是一个核心，也是一个最重要的功能，为了高效开发，建议了解这两个组件，具体的demo可以参照页面：
-        <el-link type="primary" href="/#/pages/crudTable">业务表格</el-link>、
-        <el-link type="primary" href="/#/pages/categoryTable">分类联动表格</el-link>、
-        <el-link type="primary" href="/#/pages/treeTable">树形联动表格</el-link>
+      <h2>Optimización de crud</h2>
+      <p>En pocas palabras, puede copiar directamente la carpeta del formulario comercial, cambiar el nombre, cambiar la interfaz, ajustar los detalles en él y puede usarlo directamente.</p>
+      <p>Forma de negocio, este es el concepto central de este proyecto de código abierto. Basado en la situación en el proceso de desarrollo diario, he encapsulado un núcleo<b> Componente emergente</b> y un <b>componente de tabla</b>.</p>
+      <p>En el desarrollo diario, agregar, eliminar, verificar y modificar es el núcleo y la función más importante. Para desarrollar de manera eficiente, se recomienda comprender estos dos componentes. Para obtener una demostración específica, consulte la página:
+        <el-link type="primary" href="/#/pages/crudTable">formulario de negocio</el-link>、
+        <el-link type="primary" href="/#/pages/categoryTable">Formulario de vinculación de clasificación</el-link>、
+        <el-link type="primary" href="/#/pages/treeTable">formulario de enlace de árbol</el-link>
       </p>
-      <h3>弹窗组件</h3>
-      <p>默认支持拖拽，并封装了一套专门与表格组件联动的模式，使用此模式可以快速开发</p>
-      <h3>表格组件</h3>
-      <p>把大部分表格与分页的逻辑处理到公用组件之中，开箱即用</p>
+      <h3>Componente emergente</h3>
+      <p>Admite arrastrar y soltar de forma predeterminada y encapsula un conjunto de modos especialmente vinculados con los componentes de la tabla, que se pueden utilizar para un desarrollo rápido.</p>
+      <h3>componente de formulario</h3>
+      <p>Maneje la mayor parte de la tabla y la lógica de paginación en componentes comunes, listos para usar</p>
     </article>
   </div>
 </template>

@@ -1,7 +1,7 @@
 const option = {
   series: [
     {
-      name: '访问来源',
+      name: 'Acceder a la fuente',
       type: 'pie',
       radius: ['40%', '70%'],
       avoidLabelOverlap: false,
@@ -29,11 +29,11 @@ const option = {
         show: false
       },
       data: [
-        { value: 1048, name: '搜索引擎' },
-        { value: 735, name: '直接访问' },
-        { value: 580, name: '邮件营销' },
-        { value: 484, name: '联盟广告' },
-        { value: 300, name: '视频广告' }
+        { value: 1048, name: 'motor de búsqueda' },
+        { value: 735, name: 'Acceso directo' },
+        { value: 580, name: 'Marketing por correo electrónico' },
+        { value: 484, name: 'Publicidad de afiliados' },
+        { value: 300, name: 'Anuncios de vídeo' }
       ]
     }
   ]

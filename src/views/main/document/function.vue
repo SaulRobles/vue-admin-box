@@ -1,9 +1,9 @@
 <template>
   <div class="layout-container">
-    <h1>主要功能说明</h1>
+    <h1>Descripción de las principales características</h1>
     <el-row :gutter="12">
       <el-col :span="12" class="el-col-tree-box">
-        <h2>目录结构</h2>
+        <h2>Estructura de directorios</h2>
         <div class="custom-tree">
           <el-tree
             :data="data"
@@ -21,7 +21,7 @@
         </div>
       </el-col>
       <el-col :span="12" class="el-col-tree-box">
-        <h2>文件说明</h2>
+        <h2>Descripción del documento</h2>
         <div class="custom-tree des">
           <p v-for="(row, key) in active.des" :key="key">{{ row }}</p>
         </div>
