@@ -1,12 +1,12 @@
 export const selectData = [
-  { value: 1, label: '运动' },
-  { value: 2, label: '健身' },
-  { value: 3, label: '跑酷' },
-  { value: 4, label: '街舞' }
+  { value: 1, label: 'movimiento' },
+  { value: 2, label: 'Aptitud' },
+  { value: 3, label: 'Parkour' },
+  { value: 4, label: 'Hip-hop' }
 ]
 
 export const radioData = [
-  { value: 1, label: '今天' },
-  { value: 2, label: '明天' },
-  { value: 3, label: '后天' },
+  { value: 1, label: 'Hoy' },
+  { value: 2, label: 'Mañana' },
+  { value: 3, label: 'Pasado mañana' },
 ]

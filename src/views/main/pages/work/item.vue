@@ -33,8 +33,8 @@ export default defineComponent({
     const colorInit = computed(() => {
       return (tag: string) => {
         const array = [
-          { color: '#57c05d', tag: '新增' },
-          { color: '#67a4dc', tag: '优化' }
+          { color: '#57c05d', tag: 'nuevo' },
+          { color: '#67a4dc', tag: 'mejoramiento' }
         ]
         const obj = array.find(obj => {
           return obj.tag === tag

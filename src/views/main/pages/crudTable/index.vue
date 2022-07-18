@@ -25,10 +25,10 @@
         @getTableData="getTableData"
         @selection-change="handleSelectionChange"
       >
-        <el-table-column prop="name" label="名称" align="center" />
-        <el-table-column prop="number" label="数字" align="center" />
-        <el-table-column prop="chooseName" label="选择器" align="center" />
-        <el-table-column prop="radioName" label="单选框" align="center" />
+        <el-table-column prop="name" label="nombre" align="center" />
+        <el-table-column prop="number" label="número" align="center" />
+        <el-table-column prop="chooseName" label="Selector" align="center" />
+        <el-table-column prop="radioName" label="Caja individual" align="center" />
         <el-table-column :label="$t('message.common.handle')" align="center" fixed="right" width="200">
           <template #default="scope">
             <el-button @click="handleEdit(scope.row)">{{ $t('message.common.update') }}</el-button>
@@ -62,17 +62,17 @@ export default defineComponent({
     Layer
   },
   setup() {
-    // 存储搜索用的数据
+    // Almacena datos para la búsqueda
     const query = reactive({
       input: ''
     })
-    // 弹窗控制器
+    // Controlador emergente
     const layer: LayerInterface = reactive({
       show: false,
-      title: '新增',
+      title: 'Nuevo',
       showButton: true
     })
-    // 分页参数, 供table使用
+    // Parámetros de paginación, para uso de la tabla
     const page: Page = reactive({
       index: 1,
       size: 20,
@@ -84,8 +84,8 @@ export default defineComponent({
     const handleSelectionChange = (val: []) => {
       chooseData.value = val
     }
-    // 获取表格数据
-    // params <init> Boolean ，默认为false，用于判断是否需要初始化分页
+    // Obtiene datos tabulares
+    // params <init> Boolean ，El valor predeterminado es false，Se utiliza para determinar si se requiere paginación de inicialización
     const getTableData = (init: boolean) => {
       loading.value = true
       if (init) {
@@ -119,7 +119,7 @@ export default defineComponent({
         loading.value = false
       })
     }
-    // 删除功能
+    // Quitar una función
     const handleDel = (data: object[]) => {
       let params = {
         ids: data.map((e:any)=> {
@@ -130,20 +130,20 @@ export default defineComponent({
       .then(res => {
         ElMessage({
           type: 'success',
-          message: '删除成功'
+          message: 'Eliminar correctamente'
         })
         getTableData(tableData.value.length === 1 ? true : false)
       })
     }
-    // 新增弹窗功能
+    // Añadida función de ventana emergente
     const handleAdd = () => {
-      layer.title = '新增数据'
+      layer.title = 'Nuevos datos'
       layer.show = true
       delete layer.row
     }
-    // 编辑弹窗功能
+    // Editar la función emergente
     const handleEdit = (row: object) => {
-      layer.title = '编辑数据'
+      layer.title = 'Editar los datos'
       layer.row = row
       layer.show = true
     }

@@ -110,7 +110,7 @@ var lineStyle = {
 const options = {
   backgroundColor: '#161627',
   title: {
-    text: 'AQI - 雷达图',
+    text: 'AQI - Gráficos de radar',
     left: 'center',
     top: 10,
     textStyle: {
@@ -119,7 +119,7 @@ const options = {
   },
   legend: {
     bottom: 15,
-    data: ['北京', '上海', '广州'],
+    data: ['Beijing', 'Shanghái', 'Cantón'],
     itemGap: 20,
     textStyle: {
       color: '#fff',
@@ -161,7 +161,7 @@ const options = {
   },
   series: [
     {
-      name: '北京',
+      name: 'Beijing',
       type: 'radar',
       lineStyle: lineStyle,
       data: dataBJ,
@@ -174,7 +174,7 @@ const options = {
       }
     },
     {
-      name: '上海',
+      name: 'Shanghái',
       type: 'radar',
       lineStyle: lineStyle,
       data: dataSH,
@@ -187,7 +187,7 @@ const options = {
       }
     },
     {
-      name: '广州',
+      name: 'Cantón',
       type: 'radar',
       lineStyle: lineStyle,
       data: dataGZ,

@@ -5,11 +5,11 @@
         <img class="pic-404__parent" :src="first" alt="404" />
       </div>
       <div class="bullshit">
-        <div class="bullshit__oops">无权限访问!</div>
+        <div class="bullshit__oops">Sin permiso de acceso!</div>
         <div class="bullshit__info">
-          您没有访问权限，如需权限，请联系上级授权！
+          No tiene acceso, si necesita permiso, ¡comuníquese con la autorización superior!
         </div>
-        <el-button @click="go" type="primary" round>跳转首页</el-button>
+        <el-button @click="go" type="primary" round>Ir a la página de inicio</el-button>
       </div>
     </div>
   </div>

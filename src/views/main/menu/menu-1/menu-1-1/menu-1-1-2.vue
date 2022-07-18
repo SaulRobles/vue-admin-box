@@ -1,6 +1,6 @@
 <template>
   <el-card class="box-card">
-    <p>我是四级导航菜单1-1-2</p>
+    <p>Soy un menú de navegación de nivel 4 1-1-2</p>
   </el-card>
 </template>
 

@@ -2,7 +2,7 @@ import * as echarts from 'echarts/core'
 const options = {
   color: ['#80FFA5', '#00DDFF', '#37A2FF', '#FF0087', '#FFBF00'],
   title: {
-    text: '渐变堆叠面积图'
+    text: 'Gráfico de área apilada de degradado'
   },
   tooltip: {
     trigger: 'axis',
@@ -31,7 +31,7 @@ const options = {
     {
       type: 'category',
       boundaryGap: false,
-      data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
+      data: ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo']
     }
   ],
   yAxis: [
@@ -43,7 +43,7 @@ const options = {
     {
       name: 'Line 1',
       type: 'line',
-      stack: '总量',
+      stack: 'Total',
       smooth: true,
       lineStyle: {
         width: 0
@@ -67,7 +67,7 @@ const options = {
     {
       name: 'Line 2',
       type: 'line',
-      stack: '总量',
+      stack: 'Total',
       smooth: true,
       lineStyle: {
         width: 0
@@ -91,7 +91,7 @@ const options = {
     {
       name: 'Line 3',
       type: 'line',
-      stack: '总量',
+      stack: 'Total',
       smooth: true,
       lineStyle: {
         width: 0
@@ -115,7 +115,7 @@ const options = {
     {
       name: 'Line 4',
       type: 'line',
-      stack: '总量',
+      stack: 'Total',
       smooth: true,
       lineStyle: {
         width: 0
@@ -139,7 +139,7 @@ const options = {
     {
       name: 'Line 5',
       type: 'line',
-      stack: '总量',
+      stack: 'Total',
       smooth: true,
       lineStyle: {
         width: 0

@@ -3,9 +3,9 @@
     <el-card shadow="hover" class="box-card">
       <template #header>
         <div style="text-align: left">
-          <h2>原生button</h2>
-          <p>一套漂亮的按钮集合，基于原生button组件实现，不支持尺寸控制</p>
-          <span>使用说明：打开控制台，复制元素及样式即可正常使用</span>
+          <h2>Botón nativo</h2>
+          <p>Un hermoso conjunto de botones, basados en implementaciones de componentes de botones nativos, que no admiten el control de tamaño</p>
+          <span>Instrucciones: Abra la consola, copie los elementos y estilos para trabajar</span>
         </div>
       </template>
       <el-row>

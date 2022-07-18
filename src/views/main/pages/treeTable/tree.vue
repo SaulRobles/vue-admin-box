@@ -1,10 +1,10 @@
 <template>
   <div class="category">
     <div class="header-box">
-      <h2>组织管理</h2>
+      <h2>Gestión organizacional</h2>
       <!-- <el-input
         v-model="input"
-        placeholder="请输入内容"
+        placeholder="Por favor ingrese el contenido"
         @input="searchData(true)"
       ></el-input> -->
     </div>

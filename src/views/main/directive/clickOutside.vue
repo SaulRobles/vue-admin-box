@@ -1,7 +1,7 @@
 <template>
   <div class="layout-container">
     <div class="layout-container-table">
-      点击状态：{{ sideStr }}
+      Haga clic en Estado: {{ sideStr }}
       <div class="box" v-clickoutside="setData">
         <span>InSide</span>
       </div>

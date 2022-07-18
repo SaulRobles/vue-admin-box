@@ -1,7 +1,7 @@
 <template>
   <div class="layout-container">
     <div class="layout-container-table" v-waterMarker>
-      我是一个水印页面
+      Soy una página de marca de agua
     </div>
   </div>
 </template>

@@ -1,7 +1,7 @@
 const options = {
   title: {
-    text: '南丁格尔玫瑰图',
-    subtext: '纯属虚构',
+    text: 'Tabla de rosas de Ruiseñor',
+    subtext: 'Pura ficción',
     left: 'center'
   },
   tooltip: {
@@ -24,7 +24,7 @@ const options = {
   },
   series: [
     {
-      name: '半径模式',
+      name: 'Modo de radio',
       type: 'pie',
       radius: [20, 140],
       center: ['25%', '50%'],
@@ -52,7 +52,7 @@ const options = {
       ]
     },
     {
-      name: '面积模式',
+      name: 'Modo de área',
       type: 'pie',
       radius: [20, 140],
       center: ['75%', '50%'],

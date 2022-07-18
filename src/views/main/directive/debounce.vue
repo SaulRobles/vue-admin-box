@@ -2,7 +2,7 @@
   <div class="layout-container">
     <div class="layout-container-table">
       <div class="box">
-        <el-button v-debounce="getData(123)" type="primary">防抖按钮</el-button>
+        <el-button v-debounce="getData(123)" type="primary">Botón de estabilización</el-button>
       </div>
     </div>
   </div>
@@ -22,7 +22,7 @@ export default defineComponent({
         console.log(str)
         ElMessage({
           type: 'success',
-          message: '正在拉取数据'
+          message: 'Extracción de datos'
         })
       }
     }

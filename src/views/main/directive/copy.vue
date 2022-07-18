@@ -2,8 +2,8 @@
   <div class="layout-container">
     <div class="layout-container-table">
       <div class="box">
-        <el-input v-model="input" placeholder="输入需要粘贴的值"></el-input>
-        <el-button v-copy="input" type="primary">复制到剪切板</el-button>
+        <el-input v-model="input" placeholder="Introduzca el valor que desea pegar"></el-input>
+        <el-button v-copy="input" type="primary">Copiar en el portapapeles</el-button>
       </div>
     </div>
   </div>

@@ -45,10 +45,10 @@ export default defineComponent({
           
           let oldList = evt.target.list.children
           let newList = evt.to.list.children
-          if (pullMode) { // 移动至toList并去除旧数据
+          if (pullMode) { // Mover a toList y eliminar datos antiguos
             newList.splice(newIndex, 0, oldList[oldIndex])
             oldList.splice(oldIndex, 1)
-          } else { // 同List位置修改
+          } else { // Igual que la modificación de la posición de la lista
             const tem = oldList[oldIndex]
             oldList[oldIndex] = oldList[newIndex]
             oldList[newIndex] = tem

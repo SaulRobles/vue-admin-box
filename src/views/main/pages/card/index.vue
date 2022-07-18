@@ -11,13 +11,13 @@
                   <span>{{ row.title }}</span>
                   <div class="bottom clearfix">
                     <time class="time">{{ row.time }}</time>
-                    <el-button type="text" class="edit-button" @click="showEditor">编辑</el-button>
+                    <el-button type="text" class="edit-button" @click="showEditor">Editar</el-button>
                   </div>
                 </div>
               </el-card>
             </el-col>
           </el-row>
-          <el-empty description="空空如也~" style="height: 500px;" v-show="list.length === 0"></el-empty>
+          <el-empty description="vacío~" style="height: 500px;" v-show="list.length === 0"></el-empty>
         </el-scrollbar>
       </div>
       
@@ -73,12 +73,12 @@ export default defineComponent({
         loading.value = false
       })
     }
-    // 分页相关：监听页码切换事件
+    // Relacionado con la paginación: monitorear eventos de cambio de número de página
     const handleCurrentChange = (val: Number) => {
       page.index = val
       getListData(false)
     }
-    // 分页相关：监听单页显示数量切换事件
+    // Relacionado con la paginación: supervisar el evento de cambio de cantidad de visualización de una sola página
     const handleSizeChange = (val: Number) => {
       page.size = val
       page.index = 1

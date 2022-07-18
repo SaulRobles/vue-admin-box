@@ -85,14 +85,14 @@ export default defineComponent({
       return new Promise((resolve, reject) => {
         if (form.name === '') {
           ElMessage.warning({
-            message: '用户名不能为空',
+            message: 'El nombre de usuario no puede estar vacío',
             type: 'warning'
           });
           return;
         }
         if (form.password === '') {
           ElMessage.warning({
-            message: '密码不能为空',
+            message: 'La contraseña no puede estar vacía',
             type: 'warning'
           })
           return;
@@ -111,7 +111,7 @@ export default defineComponent({
         store.dispatch('user/login', params)
         .then(async () => {
           ElMessage.success({
-            message: '登录成功',
+            message: 'Inicio de sesión correcto',
             type: 'success',
             showClose: true,
             duration: 1000

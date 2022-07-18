@@ -1,11 +1,11 @@
 <template>
   <div class="layout-container">
     <div class="layout-container-table">
-      <p>自由切换父级</p>
+      <p>Cambia de padre libremente</p>
       <el-button @click="changeBox('father')">father</el-button>
       <el-button @click="changeBox('body')">body</el-button>
-      <el-button @click="changeBox('.layout-container-table')">自定义父级类名：.layout-container-table</el-button>
-      <p>父级：{{ dragableFather }}</p>
+      <el-button @click="changeBox('.layout-container-table')">Personalizar el nombre de la clase principal：.layout-container-table</el-button>
+      <p>Padre: {{ dragableFather }}</p>
       <div class="box">
         <div class="row" v-dragable="dragableFather"></div>
         <div class="row" v-dragable="dragableFather"></div>

@@ -2,7 +2,7 @@
   <div class="layout-container">
     <div class="layout-container-table">
       <el-alert
-        title="使用element-plus自带的无限加载功能实现"
+        title="Utilice la función de carga ilimitada incorporada de element-plus"
         type="info"
         show-icon
         style="margin-bottom: 20px;">

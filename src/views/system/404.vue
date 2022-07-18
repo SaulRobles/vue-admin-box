@@ -8,11 +8,11 @@
         <img class="pic-404__child right" :src="four_cloud" alt="404" />
       </div>
       <div class="bullshit">
-        <div class="bullshit__oops">页面不存在!</div>
+        <div class="bullshit__oops">La página no existe!</div>
         <div class="bullshit__info">
-          请检查您输入的网址是否正确，或单击下面的按钮返回主页
+          Compruebe que ha introducido la URL correctamente o haga clic en el botón de abajo para volver a la página de inicio
         </div>
-        <el-button @click="go" type="primary" round>跳转首页</el-button>
+        <el-button @click="go" type="primary" round>Ir a la página de inicio</el-button>
       </div>
     </div>
   </div>

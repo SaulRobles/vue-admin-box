@@ -25,10 +25,10 @@
         @getTableData="getTableData"
         @selection-change="handleSelectionChange"
       >
-        <el-table-column prop="name" label="名称" align="center" />
-        <el-table-column prop="number" label="数字" align="center" />
-        <el-table-column prop="chooseName" label="选择器" align="center" />
-        <el-table-column prop="radioName" label="单选框" align="center" />
+        <el-table-column prop="name" label="nombre" align="center" />
+        <el-table-column prop="number" label="número" align="center" />
+        <el-table-column prop="chooseName" label="Selector" align="center" />
+        <el-table-column prop="radioName" label="Caja individual" align="center" />
         <el-table-column :label="$t('message.common.handle')" align="center" fixed="right" width="200">
           <template #default="scope">
             <el-button @click="handleEdit(scope.row)">{{ $t('message.common.update') }}</el-button>
@@ -61,17 +61,17 @@ export default defineComponent({
     Layer
   },
   setup() {
-    // 存储搜索用的数据
+    // Almacenar datos para la búsqueda
     const query = reactive({
       input: ''
     })
-    // 弹窗控制器
+    // controlador emergente
     const layer: LayerInterface = reactive({
       show: false,
       title: '新增',
       showButton: true
     })
-    // 分页参数, 供table使用
+    // Parámetros de paginación, para uso en tablas
     const page: Page = reactive({
       index: 1,
       size: 20,
@@ -84,8 +84,8 @@ export default defineComponent({
     const handleSelectionChange = (val: []) => {
       chooseData.value = val
     }
-    // 获取表格数据
-    // params <init> Boolean ，默认为false，用于判断是否需要初始化分页
+    // obtener datos de la tabla
+    // params <init> Boolean ，El valor predeterminado es falso, que se utiliza para determinar si se debe inicializar la paginación.
     const getTableData = (init: boolean) => {
       loading.value = true
       if (init) {
@@ -120,7 +120,7 @@ export default defineComponent({
         loading.value = false
       })
     }
-    // 删除功能
+    // borrar función
     const handleDel = (data: object[]) => {
       let params = {
         ids: data.map((e:any)=> {
@@ -136,13 +136,13 @@ export default defineComponent({
         getTableData(tableData.value.length === 1 ? true : false)
       })
     }
-    // 新增弹窗功能
+    //  Agregar función emergente
     const handleAdd = () => {
       layer.title = '新增数据'
       layer.show = true
       delete layer.row
     }
-    // 编辑弹窗功能
+    // Editar función emergente
     const handleEdit = (row: object) => {
       layer.title = '编辑数据'
       layer.row = row

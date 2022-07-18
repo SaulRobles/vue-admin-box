@@ -1,7 +1,7 @@
 <template>
   <div class="layout-container">
     <div class="layout-container-table">
-      <el-button v-longpress="setData">长按指令</el-button>
+      <el-button v-longpress="setData">Mantenga presionado el comando</el-button>
       <p>{{ data }}</p>
     </div>
   </div>

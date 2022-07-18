@@ -7,7 +7,7 @@
 <script lang="ts">
 import type { Ref } from 'vue'
 import { defineComponent, onMounted, ref } from 'vue'
-import { useEventListener } from '@vueuse/core' //引入监听函数，监听在vue实例中可自动销毁，无须手动销毁
+import { useEventListener } from '@vueuse/core' //Se introduce una función de escucha y el oyente se puede destruir automáticamente en la instancia de vue sin destrucción manual
 import * as echarts from 'echarts/core'
 import {
   CanvasRenderer
@@ -22,7 +22,7 @@ import {
   LegendComponent
 } from 'echarts/components'
 
-// 引入options配置
+// Configuración de opciones introducidas
 import options from './options/radar'
 export default defineComponent({
   setup() {

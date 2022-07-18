@@ -1,6 +1,6 @@
 <template>
   <div class="layout-container">
-    <el-alert type="success">请尝试左右拖动模块，数据从接口而来，任意时刻均可以提交至接口中去</el-alert>
+    <el-alert type="success">Intente arrastrar el módulo hacia la izquierda y hacia la derecha. Los datos provienen de la interfaz y se pueden enviar a la interfaz en cualquier momento.</el-alert>
     <div class="layout-container-table">
       <div class="list">
         <Block v-for="(block, key) in list" :key="key" :data="block" />

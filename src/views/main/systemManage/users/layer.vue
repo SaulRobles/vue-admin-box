@@ -1,13 +1,13 @@
 <template>
   <Layer :layer="layer" @confirm="submit">
     <el-form :model="ruleForm" :rules="rules" ref="form" label-width="120px" style="margin-right:30px;">
-      <el-form-item label="名称：" prop="name">
-        <el-input v-model="ruleForm.name" placeholder="请输入名称"></el-input>
+      <el-form-item label="Nombre: " prop="name">
+        <el-input v-model="ruleForm.name" placeholder="Introduzca un nombre"></el-input>
       </el-form-item>
-      <el-form-item label="数字：" prop="sort">
-        <el-input v-model="ruleForm.sort" oninput="value=value.replace(/[^\d]/g,'')" placeholder="只能输入正整数"></el-input>
+      <el-form-item label="Cifra: " prop="sort">
+        <el-input v-model="ruleForm.sort" oninput="value=value.replace(/[^\d]/g,'')" placeholder="Sólo se pueden introducir enteros positivos"></el-input>
       </el-form-item>
-			<el-form-item label="选择器：" prop="select">
+			<el-form-item label="Selector:" prop="select">
 			  <el-select v-model="ruleForm.select" placeholder="请选择" clearable>
 					<el-option
 						v-for="item in options"
